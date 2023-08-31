@@ -52,15 +52,6 @@ class Dashboard extends CI_Controller
                 $data['tahun'] = $this->m_data->getDataTahun();
                 $data['kategori'] = $this->m_data->getKategoriPendidikan();
                 break;
-                // case 'perbandingan':
-                //     $data['dataPendidikan'] = $this->m_data->getDataPendidikanPerTingkat($param);
-                //     $data['dataPengangguran'] = $this->m_data->getDataPengangguranPerTahun($param);
-                //     $data['param'] =  $param;
-                //     $data['tahun'] = $this->m_data->getDataTahun();
-                //     $data['kategori'] = $this->m_data->getKategoriPendidikan();
-                //     $data['umur'] = $this->m_data->getUmur();
-                //     $data['pendidikan'] = $this->m_data->getPendidikan();
-                //     break;
             case 'perbandingan':
                 $data['param'] =  $param;
                 $data['tahun'] = $this->m_data->getDataTahun();
@@ -82,16 +73,6 @@ class Dashboard extends CI_Controller
         $this->load->view("v_template", $data);
     }
 
-    // public function data_perbandingan()
-    // {
-
-    //     $params['tahun'] = $this->input->post('tahun');
-    //     $params['wilayah'] = $this->input->post('wilayah');
-    //     $params['pendidikan'] = $this->input->post('pendidikan');
-    //     $data['grafik_data'] = $this->m_data->getPerbandingan($params);
-
-    //     $this->content('perbandingan', $data);
-    // }
 
     public function data_perbandingan()
     {
@@ -156,17 +137,7 @@ class Dashboard extends CI_Controller
         $this->content('pendidikan', $param);
     }
 
-    // public function data_perbandingan()
-    // {
-    //     $this->form_validation->set_rules('tahun', 'Tahun', 'required|trim');
-    // 	$this->form_validation->set_rules('pendidikan', 'Pendidikan', 'required|trim', array('required|trim' => 'Pilih data kategori!'));
-    // 	$this->form_validation->set_rules('wilayah', 'Wilayah', 'required|trim');
-    //     $param['tahun'] = $this->input->post('tahun');
-    //     $param['pendidikan'] = $this->input->post('pendidikan');
-    //     $param['aps'] = $this->input->post('kategory-aps');
-    //     $param['apm-apk'] = $this->input->post('kategory-apmapk');
-    //     $this->content('perbandingan', $param);
-    // }
+
 
     public function data_masyarakat()
     {

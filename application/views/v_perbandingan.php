@@ -59,7 +59,7 @@
 </div>
 
 
-<div class="card">
+<div class="card" id="card">
     <div class="row">
         <div class="col-6">
             <div class="card-body">
@@ -87,12 +87,12 @@
                             <th> Tingkat Pengangguran Terbuka</th>
                         </tr>
                         <tr>
-                            <th><button class="btn btn-xs btn-info"></button> ATM </th>
+                            <th><button class="btn btn-xs btn-info"></button> APM </th>
                             <th>:</th>
                             <th> Angka Partisipasi Murni</th>
                         </tr>
                         <tr>
-                            <th><button class="btn btn-xs btn-success"></button> ATK </th>
+                            <th><button class="btn btn-xs btn-success"></button> APK </th>
                             <th>:</th>
                             <th> Angka Partisipasi Kasar</th>
                         </tr>
@@ -115,6 +115,7 @@
     $(document).ready(function() {
         var chart;
         $('#ket').hide();
+        $('#card').hide();
         $("#loadChart").click(function() {
             var tahun = $("#tahun").val();
             var wilayah = $("#wilayah").val();
@@ -157,6 +158,7 @@
                 },
                 success: function(data) {
                     $('#ket').show();
+                    $('#card').show();
                     console.log(data.data);
 
                     if (chart) {

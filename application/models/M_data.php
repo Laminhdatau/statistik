@@ -179,12 +179,11 @@ class M_data extends CI_Model
 
 
 
-  //MODIF JOBDESK MIN
+  //PERBANDINGAN JOBDESK LM
 
   public function getPerbandingan($params = null)
   {
     if ($params != null) {
-      // Lakukan query ke database sesuai parameter
 
       $query = $this->db->query('
       SELECT
